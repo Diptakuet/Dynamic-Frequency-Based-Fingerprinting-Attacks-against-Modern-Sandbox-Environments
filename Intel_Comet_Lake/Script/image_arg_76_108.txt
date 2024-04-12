@@ -1,0 +1,33 @@
+docker run -d -it --cpuset-cpus=0 --name erlang --rm erlang 
+docker run -d -it --cpuset-cpus=0 --name mediawiki --rm mediawiki 
+docker run -d -it --cpuset-cpus=0 --name mono --rm mono 
+docker run -d -it --cpuset-cpus=0 -p 8080:8080 --name owncloud --rm owncloud/server  
+docker run -d -it --cpuset-cpus=0 -p 8080:80 --name phpmyadmin -e PMA_ARBITRARY=1 --rm phpmyadmin 
+docker run -d -it --cpuset-cpus=0 --name jruby --rm jruby 
+docker run -d -it --cpuset-cpus=0 --name elixir --rm elixir 
+docker run -d -it --cpuset-cpus=0 --name amazoncorreto --rm amazoncorretto 
+docker run -d -it --cpuset-cpus=0 --name pypy --rm pypy 
+docker run -d -it --cpuset-cpus=0 --name eclipse-temurin --rm eclipse-temurin 
+docker run -d -it --cpuset-cpus=0 -p 8069:8069 --name odoo -t --rm odoo 
+docker run -d -it --cpuset-cpus=0 -e ARANGO_RANDOM_ROOT_PASSWORD=1 --name arangodb --rm arangodb 
+docker run -d -it --cpuset-cpus=0 --name xwiki --rm xwiki
+docker run -d -it --cpuset-cpus=0 --name hylang --rm hylang
+docker run -d -it --cpuset-cpus=0 --name websphere-liberty --rm websphere-liberty
+docker run -d -it --cpuset-cpus=0 --name sapmachine --rm sapmachine
+docker run -d -it --cpuset-cpus=0 --name swift --rm swift
+docker run -d -it --cpuset-cpus=0 --name rockylinux --rm rockylinux:9
+docker run -d -it --cpuset-cpus=0 --name tomee --rm tomee
+docker run -d -it --cpuset-cpus=0 --name piwik --rm piwik
+docker run -d -it --cpuset-cpus=0 --name yourls -p 8080:80 --rm yourls
+docker run -d -it --cpuset-cpus=0 --name iojs -p 8080:80 --rm iojs
+docker run -d -it --cpuset-cpus=0 --name crate --publish 4200:4200 --publish 5432:5432 --rm crate -Cdiscovery.type=single-node
+docker run -d -it --cpuset-cpus=0 --name photon --rm photon
+docker run -d -it --cpuset-cpus=0 --name orientdb --rm orientdb
+docker run -d -it --cpuset-cpus=0 --name julia --rm julia
+docker run -d -it --cpuset-cpus=0 --name varnish -v /home/sdmay23-16/Desktop/Containerized_Apps/code/default.vcl:/etc/varnish/default.vcl:ro --tmpfs /var/lib/varnish/varnishd:exec -p 8080:80 --rm varnish
+docker run -d -it --cpuset-cpus=0 --name ibmjava --rm ibmjava
+docker run -d -it --cpuset-cpus=0 --name open-liberty --rm open-liberty
+docker run -d -it --cpuset-cpus=0 --name bonita -p 8080:80 --rm bonita 
+docker run -d -it --cpuset-cpus=0 --name monica -p 8080:80 --rm monica
+docker run -d -it --cpuset-cpus=0 --name neurodebian --rm neurodebian
+docker run -d -it --cpuset-cpus=0 --name fluentd --rm fluentd

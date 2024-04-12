@@ -1,0 +1,30 @@
+docker run -d -it --cpuset-cpus=0 openjdk
+docker run -d -it --cpuset-cpus=0 golang
+docker run --cpuset-cpus=0 -d -p 8083:8083 -p 83:83 -v /home/sdmay23-16/Desktop/Containerized_Apps/code/traefik.yml:/etc/traefik/traefik.yml -v /var/run/docker.sock:/var/run/docker.sock traefik
+docker run --cpuset-cpus=0 -d --hostname my-rabbit rabbitmq
+docker run --cpuset-cpus=0 -d -p 5000:5000 --restart always registry
+docker run --cpuset-cpus=0 -p 8080:80 -d wordpress
+docker run --cpuset-cpus=0 -p 8086:8086 -v myInfluxVolume:/var/lib/influxdb2 influxdb
+docker run --cpuset-cpus=0 -d -e CONSUL_BIND_INTERFACE=eth0 consul
+docker run --cpuset-cpus=0 -v /some/content:/usr/share/nginx/html:ro -d nginx
+docker run --cpuset-cpus=0 -d redis
+docker run --cpuset-cpus=0 -dit -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd
+docker run --cpuset-cpus=0 -d --rm mongo
+docker run --cpuset-cpus=0 -d memcached -m 64
+docker run -d -it --cpuset-cpus=0 --rm php
+docker run -d -it --cpuset-cpus=0 -p 8080:80 --rm nextcloud
+docker run -d -it --cpuset-cpus=0 --rm -v "$PWD"/my-maven-project:/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-jdk-8 mvn clean install
+docker run -d -it --cpuset-cpus=0 -e NODE_ENV=development --rm ghost
+docker run -d -it --cpuset-cpus=0 --restart always zookeeper
+docker run -it -d --cpuset-cpus=0 -p 8888:8888 --rm chronograf
+docker run -it -d --cpuset-cpus=0 -p 8080:80 --rm drupal
+docker run -it -d --cpuset-cpus=0 -p 8080:8080 -p 50000:50000 --rm jenkins/jenkins:lts
+docker run -it -d --cpuset-cpus=0 --net roy_network -p 5601:5601 --rm kibana:8.6.1
+docker run -it -d --cpuset-cpus=0 -p 8983:8983 -t --rm solr
+docker run -it -d --cpuset-cpus=0 -e MYSQL_ROOT_PASSWORD=my-secret-pw --rm percona
+docker run -it -d --cpuset-cpus=0 -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept --rm teamspeak
+docker run -it -d --cpuset-cpus=0 --rm groovy
+docker run -it -d --cpuset-cpus=0 -v "$PWD:/data" --rm rethinkdb
+docker run -it -d --cpuset-cpus=0 --rm redmine
+docker run -it -d --cpuset-cpus=0 -p 9092:9092 --rm kapacitor
+docker run -it -d --cpuset-cpus=0 --rm erlang
