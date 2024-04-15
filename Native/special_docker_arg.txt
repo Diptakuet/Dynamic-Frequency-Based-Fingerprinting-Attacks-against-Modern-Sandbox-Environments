@@ -1,0 +1,22 @@
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name crate crate:latest -Cdiscovery.type=single-node
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name elasticsearch elasticsearch:8.10.3
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name vault vault:1.13.3
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name mariadb --env MARIADB_USER=example-user --env MARIADB_PASSWORD=my_cool_secret --env MARIADB_ROOT_PASSWORD=my-secret-pw mariadb:latest
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name joomla -e JOOMLA_DB_HOST=10.1.2.3:3306 -e JOOMLA_DB_USER=... -e JOOMLA_DB_PASSWORD=... joomla:latest
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql:latest
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name geonetwork -e ES_HOST=elasticsearch geonetwork:latest
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name logstash logstash:8.10.2
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name glassfish glassfish
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name kibana kibana:8.6.1 
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name silverpeas -p 8080:8000 -e DB_NAME="Silverpeas" -e DB_USER="silverpeas" -e DB_PASSWORD="thesilverpeaspassword" -v silverpeas-log:/opt/silverpeas/log -v silverpeas-data:/opt/silverpeas/data silverpeas
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name eggdrop -e NICK=FooBot -e SERVER=irc.libera.chat -v /path/for/host/data:/home/eggdrop/eggdrop/data eggdrop
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name consul consul:1.15.4
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name ghost -e NODE_ENV=development ghost
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name arangodb -e ARANGO_RANDOM_ROOT_PASSWORD=1 arangodb
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name traefik -p 8080:8080 -p 80:80 -v /home/roydipta/Gvisor/traefik.yml:/etc/traefik/traefik.yml -v /var/run/docker.sock:/var/run/docker.sock traefik
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name couchdb -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password couchdb
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name spiped -v /home/roydipta/Gvisor/keyfile:/spiped/key:ro -p 8025:8025 --init spiped -d -s [0.0.0.0]:8025 -t [127.0.0.1]:25
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name telegraf -v /home/roydipta/Gvisor/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name percona -e MYSQL_ROOT_PASSWORD=my-secret-pw  percona
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name jenkins jenkins:2.60.3
+docker run --cpuset-cpus=1 -t --rm --runtime=runsc --name teamspeak -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak

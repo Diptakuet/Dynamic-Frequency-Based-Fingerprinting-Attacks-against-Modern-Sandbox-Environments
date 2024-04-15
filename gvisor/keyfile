@@ -1,0 +1,1 @@
+dd if=/dev/urandom of=/path/to/keyfile bs=32 count=1
