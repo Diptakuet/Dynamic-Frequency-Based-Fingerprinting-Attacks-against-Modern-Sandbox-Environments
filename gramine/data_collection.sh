@@ -1,7 +1,6 @@
 #!/bin/bash
 
 num_measure=100
-start=41
 
 file='image_name_1_50.txt'
 
@@ -14,11 +13,11 @@ do
 done < $file
 
 
-#num_container=$((${#run_command[@]}))
-num_container=50
+num_container=$((${#image_name[@]}))
+
 sleep 5s
 
-for ((c=$start;c<=$num_container;c++))
+for ((c=1;c<=$num_container;c++))
 do
   for ((i=1;i<=$num_measure;i++))
   do

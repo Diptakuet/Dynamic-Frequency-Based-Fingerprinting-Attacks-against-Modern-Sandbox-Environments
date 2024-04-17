@@ -1,8 +1,8 @@
 #!/bin/bash
 
-num_img=121
+num_img=126
 num_measure=100
-start=109
+
 
 
 file='container_name.txt'
@@ -24,7 +24,7 @@ do
 done < $file2
 
 
-for ((i=$start;i<=$num_img;i++))
+for ((i=1;i<=$num_img;i++))
 do
   for ((j=1;j<=$num_measure;j++))
   do

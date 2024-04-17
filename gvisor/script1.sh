@@ -1,3 +1,11 @@
+#!/bin/bash
+
+###############################################
+Reference:
+https://gvisor.dev/docs/user_guide/install/
+###############################################
+
+
 (
   set -e
   ARCH=$(uname -m)

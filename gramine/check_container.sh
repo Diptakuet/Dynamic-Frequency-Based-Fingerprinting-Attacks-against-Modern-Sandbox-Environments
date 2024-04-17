@@ -1,12 +1,8 @@
 #!/bin/bash
 
 num_measure=1
-start=28
 
-num_container=28
-
-
-file='image_name_1_30.txt'
+file='image_name_1_50.txt'
 
 
 i=1
@@ -17,9 +13,9 @@ do
 done < $file
 
 
-#num_container=$((${#run_command[@]}))
+num_container=$((${#image_name[@]}))
 
-for ((c=$start;c<=$num_container;c++))
+for ((c=1;c<=$num_container;c++))
 do
   for ((i=1;i<=$num_measure;i++))
   do
