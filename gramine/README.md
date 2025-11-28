@@ -91,14 +91,16 @@ This repository assumes that all low-level environment setup (drivers, kernel, S
 
 ---
 
-## Repository Structure (Example)
-
-You can adapt this to match your actual layout:
+## Repository Structure
 
 ```text
-.
-├── app/                  # Application source code
-├── docker/               # Dockerfiles and container configuration
-├── gsc/                  # GSC-related configuration, manifests, scripts
-├── scripts/              # Helper scripts (build, run, etc.)
-└── README.md
+├── pull_container.sh
+├── build_image.sh
+├── signed_image.sh
+├── run_docker.sh
+├── check_container.sh
+├── data.sh
+├── data_collection.sh
+├── kill_docker.sh
+
+
