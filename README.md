@@ -6,4 +6,10 @@ The cloud computing landscape has evolved significantly in recent years, embraci
   <img src="Threat_model.png" width="800" title="Threat Model">
 </p>
 
-
+## Targeted Sandbox Environments
+Choose one of the environments:
+- [ ] Native (Docker Container)
+- [ ] gVisor 
+- [ ] Firecracker VMM
+- [ ] AMD SEV
+- [ ] Gramine
