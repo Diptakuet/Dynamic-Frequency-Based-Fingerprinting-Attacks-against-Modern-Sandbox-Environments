@@ -1,0 +1,3 @@
+[submodule "gramine/gsc"]
+	path = gramine/gsc
+	url = https://github.com/gramineproject/gsc
