@@ -12,14 +12,13 @@ This must be completed once before running workloads.
 Use:
 
 - `status.sh`  
-  This shows whether a task is currently running inside the AMD SEV container.
+  This shows whether a task within the container is currently running inside AMD SEV.
 
 ### **3. Collect CPU Frequency Data**
 Two scripts are provided:
 
 #### **A. `data.sh`**
 Collects **4,000 samples** of CPU-frequency data while a containerized workload is running.  
-This is used to study microVM behavior, and workload characteristics.
 
 #### **B. `data_collection.sh`**
 This performs automated large-scale data collection:
